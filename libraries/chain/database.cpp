@@ -3570,7 +3570,7 @@ void database::process_hardforks()
       // If there are upcoming hardforks and the next one is later, do nothing
       const auto& hardforks = get_hardfork_property_object();
 
-      if( has_hardfork( STEEMIT_HARDFORK_0_5__54 ) )
+      if( has_hardfork(STEEMIT_HARDFORK_0_19__1053) )
       {
          while( _hardfork_versions[ hardforks.last_hardfork ] < hardforks.next_hardfork
             && hardforks.next_hardfork_time <= head_block_time() )
@@ -3586,7 +3586,7 @@ void database::process_hardforks()
       {
          while( hardforks.last_hardfork < STEEMIT_NUM_HARDFORKS
                && _hardfork_times[ hardforks.last_hardfork + 1 ] <= head_block_time()
-               && hardforks.last_hardfork < STEEMIT_HARDFORK_0_5__54 )
+               && hardforks.last_hardfork < STEEMIT_HARDFORK_0_19__1053)
          {
             apply_hardfork( hardforks.last_hardfork + 1 );
          }

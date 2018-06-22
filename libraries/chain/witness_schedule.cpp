@@ -186,7 +186,7 @@ void update_witness_schedule4( database& db )
 
    auto majority_version = wso.majority_version;
 
-   if( db.has_hardfork( STEEMIT_HARDFORK_0_5__54 ) )
+   if( db.has_hardfork(STEEMIT_HARDFORK_0_19__1053) )
    {
       flat_map< version, uint32_t, std::greater< version > > witness_versions;
       flat_map< std::tuple< hardfork_version, time_point_sec >, uint32_t > hardfork_version_votes;
